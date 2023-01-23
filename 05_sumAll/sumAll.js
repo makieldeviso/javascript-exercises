@@ -1,21 +1,41 @@
 const sumAll = function(firstNum, lastNum) {
 
-// using Arithmetic Progression Formula
-
 if (firstNum < 0 || lastNum < 0) {
     return "ERROR";
 } else if (typeof firstNum !== "number" || typeof lastNum !== "number") {
     return "ERROR";
 }
 
-let numOfDigits = (firstNum + lastNum - 1);
-console.log(numOfDigits)
+// --------------using Arithmetic Progression Formula ---------------
 
-let total = (numOfDigits / 2) * (firstNum + lastNum);
+// let numOfDigits = (firstNum + lastNum - 1);
+// console.log(numOfDigits)
 
-return total;
+// let total = (numOfDigits / 2) * (firstNum + lastNum);
+
+// return total;
+
+// -------------- Using manual solution ------------------
+let totalCounter = 0;
+if (firstNum < lastNum) {
+    
+    for (let i = firstNum; i <= lastNum; i++) {
+        totalCounter += i;
+    }
+
+return totalCounter;
+
+} else if (lastNum < firstNum) {
+
+    for (let i = lastNum; i <= firstNum; i++) {
+        totalCounter += i;
+    }
+
+return totalCounter;
+}
 
 };
+
 
 
 // Do not edit below this line
